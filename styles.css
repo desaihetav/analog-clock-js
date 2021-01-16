@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #f2f3f7;
+}
+
+.clock {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 6px 6px 18px 0 rgba(55, 84, 170, 0.2),
+    -6px -6px 18px 0 rgba(255, 255, 255, 1),
+    inset 6px 6px 13px 0 rgba(255, 255, 255, 1),
+    inset -6px -6px 13px 0 rgba(55, 84, 170, 0.15);
+}
+.clock::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  z-index: 99;
+  border-radius: 50%;
+}
+
+.clock .hr,
+.clock .min,
+.clock .sec {
+  position: absolute;
+}
+
+.clock .hr,
+.h {
+  height: 120px;
+  width: 120px;
+}
+
+.clock .min,
+.m {
+  height: 170px;
+  width: 170px;
+}
+
+.clock .sec,
+.s {
+  height: 200px;
+  width: 200px;
+}
+
+.h,
+.m,
+.s {
+  display: flex;
+  justify-content: center;
+  transition: transform 1s linear;
+}
+
+.h::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 60px;
+  background-color: #2f68f6;
+  border-radius: 4px;
+}
+
+.m::before {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: 85px;
+  background-color: #2f68f6;
+  border-radius: 4px;
+  opacity: 0.6;
+}
+
+.s::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100px;
+  background-color: #2f68f6;
+  border-radius: 4px;
+  opacity: 0.2;
+}
